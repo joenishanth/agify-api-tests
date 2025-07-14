@@ -14,7 +14,8 @@
 ## How  to generate html report:
 1. npm generate-report
 
-## Framework setup:
+## Framework:
 1. Tests/scenarios can be found inside "features" folder
 2. Implementation of steps can be found in "steps" folder
-3. CcucumberJs -> world object is used to share data between steps in a scenario
+3. CucumberJs -> world object is used to share data between steps in a scenario
+4. cucumber Hooks are to log Scenario and Steps for demonstration purpose
