@@ -1,0 +1,16 @@
+{
+  "default": {
+    "publish": false,
+    "format": ["json:./report/cucumber_report.json"],
+    "worldParameters": {
+      "baseUrl": "https://api.agify.io"
+    },
+    "formatOptions": {
+      "snippetInterface": "synchronous"
+    },
+    "require": [
+      "steps/**/*.steps.ts",
+      "hooks.ts"],
+    "paths": ["features/**/*.feature"]
+  }
+}
