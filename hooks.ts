@@ -21,6 +21,7 @@ After(function ({pickle, result }) {
   } else {
    console.log(` - Scenario failed`);
   }
+   console.log(`-----------------------------------------`)
 })  
 
 AfterAll(function () {
