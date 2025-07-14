@@ -7,7 +7,7 @@ BeforeAll(function () {
 })
 
 Before(function ({pickle}) {
-  console.log(`Running before scenario: ${pickle.steps.length} steps in ${pickle.name}`)
+  console.log(`Running before scenario: ${pickle.name}`)
 })
 
 After(function ({pickle, result }) {

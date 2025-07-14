@@ -62,10 +62,7 @@ Then('the response should return the age of {string} in Country {string} as {int
 })
 
 Then('the API should respond with status code {int}', async function (statusCode) {
-  console.log(this.response.body)
-  console.log(this.response.status)//Same function for two scenarios 1 and 3
   assert.equal(this.response.status, statusCode)
-  console.log(this.response.body)
 })
 
 Then('the response should contain the age of {string}', async function (name) {

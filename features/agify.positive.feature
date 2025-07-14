@@ -3,11 +3,17 @@ Feature: Retrieve Age Predictions from Agify API
     As a user of the Agify API
     I want to retrieve age predictions based on names
 
+    Scenario: Verify the Response for a Single name and without Country Id
+        Given I am a user
+        When I send a request to agify to get the age of "John"
+        Then the API should respond with status code 200
+        And the response should returns Agify object
+
     Scenario: Verify the Response for a Single name and Country
         Given I am a user
         When I request Agify to provide the localized age of "John" in country "US"
         Then the API should respond with status code 200
-        And the response should returns Agify object
+        And the response should returns AgifyWithCountryId object
 
     Scenario Outline: Verify agify returns the correct name in the response
         Given I am a user
@@ -20,12 +26,6 @@ Feature: Retrieve Age Predictions from Agify API
             | Michael  |
             | Benjamin |
             | Sarah    |
-
-    Scenario: Verify the Response for a Single name and Country
-        Given I am a user
-        When I request Agify to provide the localized age of "John" in country "US"
-        Then the API should respond with status code 200
-        And the response should returns AgifyWithCountryId object
 
     Scenario: Verify age can be retrieved for multiple names in the same request
         Given I am a user
@@ -49,7 +49,7 @@ Feature: Retrieve Age Predictions from Agify API
         Then the API should respond with status code 200
         But the field "count" should be 0
         And the field "age" should be null
-        
+
     Scenario: Verify NO data is returned for valid name with special characters
         Given I am a user
         When I send a request to agify to get the age of "123$#!"

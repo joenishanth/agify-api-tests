@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "API tests for Kaluza using Cucumber and Jest",
   "scripts": {
-    "test": "jest --config jest.config.js",
-    "cucumber": "cucumber-js"
+    "api-test": "cucumber-js",
+    "generate-report": "node report.js"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",
