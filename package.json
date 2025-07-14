@@ -1,12 +1,12 @@
 {
-  "name": "kaluza-api-tests",
+  "name": "agify-api-tests",
   "version": "1.0.0",
-  "description": "API tests for Kaluza using Cucumber and Jest",
+  "description": "API tests for Agify using Cucumber and Jest",
   "scripts": {
     "api-test": "cucumber-js",
     "generate-report": "node report.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "@cucumber/cucumber": "^11.3.0",
     "@types/jest": "^29.5.14",
     "@types/log4js": "^0.0.33",
@@ -15,9 +15,7 @@
     "supertest": "^7.1.3",
     "ts-jest": "^29.4.0",
     "tslint": "^5.20.1",
-    "typescript": "^5.8.3"
-  },
-  "dependencies": {
+    "typescript": "^5.8.3",
     "cucumber-html-reporter": "^7.2.0",
     "log4js": "^6.9.1"
   }
